@@ -10,6 +10,8 @@
 	f*=i;
 	return(f);
   }
+
+  //for prime number
  int isprime(int a){
  		int i;
  	for(i=2;i<a;i++)
@@ -18,6 +20,7 @@
  	return(1);
  }
  
+   //for armstrongs number
  int isamongs(int a){
  	int n=a,sum=0,deno;
  	while(n!=0){
@@ -31,6 +34,8 @@
 	 else
 	 return (0);
  }
+
+ //for largest of three number
  int largest(int x,int y)
  {
 	if(x>y)
@@ -39,6 +44,8 @@
 	return y;
 
  }
+
+ //for perfect number
  int perfect(int a){
 	int i,div,sum=0;
 	for(i=1;i<=a/2;i++)
@@ -51,6 +58,25 @@
 	return(1);
 	else
 	return(0);
+
+	//to check odd or even
+	int isodd(int a){
+		if(a%2==0)
+		return 1;
+		else 
+		return 0;
+	}
+
+	//to find reverse a number
+	int revrse(int a){
+	int sum=0;
+	while(a!=0){
+		sum=sum*10+a%10;
+		a/=10;
+		
+	}
+	return sum;
+}
 }
  
  int main(){
@@ -92,9 +118,27 @@
 	 printf("\nenter x for check perfect  number or not..");
 	 scanf("%d",&x);
 	 if(perfect(x))
-printf("\n%d is the perfect no\n",x);
-else
-printf("\n%d is not perfect no\n",x);
+      printf("\n%d is the perfect no\n",x);
+     else
+     printf("\n%d is not perfect no\n",x);
+	 
+	 //odd or even
+	 int y;
+	 printf("enter y for check odd or even..");
+	 scanf("%d",&y);
+	 if(isodd(y)){
+		printf("\n%d is even\n",y);
+	 }
+	 else
+	 {
+		printf("\n%d is odd\n",y);
+	 }
+      //to find reverse a number
+	  int z;
+     printf("enter z to reverse...");
+     scanf("%d",&z);
+     printf("\n%dis the reverse of %d\n ",revrse(z),z);
+
 
  
 
