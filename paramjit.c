@@ -17,6 +17,7 @@
  	return(0);
  	return(1);
  }
+ 
  int isamongs(int a){
  	int n=a,sum=0,deno;
  	while(n!=0){
@@ -44,7 +45,7 @@
 	{
 		div=a%i;
 		if(div==0)
-		sum+=div;
+		sum+=i;
 	}
 	if(sum==a)
 	return(1);
@@ -53,30 +54,47 @@
 }
  
  int main(){
- 	int i, a,f,p,m,l;
- 	printf("enter a number");
+ 	int  a,f,l;
+ 	printf("enter a to find factorial....");
  	scanf("%d",&a);
  	f=factorial( a);
- 	printf("%d\n",f);
- 	if (isprime(a)) {
-        printf("%d is a prime number.\n", a);
+ 	printf("\n%d is the factorial of %d\n",f,a);
+
+	//for prime number
+	int p;
+	printf("enter p for check it prime or not...");
+	scanf("%d",&p);
+ 	if (isprime(p)) {
+        printf("\n%d is a prime number.\n", p);
     } else {
-        printf("%d is not a prime number.\n", a);
+        printf("\n%d is not a prime number.\n", p);
     }
- 	if(isamongs(a)){
- 	 printf("%d is an Armstrong number.\n", a);
+	
+	//for armstrongs number
+	int m;
+	printf("enter m for check armstrong or not..");
+	scanf("%d",&m);
+ 	if(isamongs(m)){
+ 	 printf("\n%d is an Armstrong number.\n", m);
     } else {
-        printf("%d is not an Armstrong number.\n", a);
-    }	
+        printf("\n%d is not an Armstrong number.\n", m);
+    }
+
+	//for largest of three number	
 	int b,c;
 	printf("enter two  number");
 	scanf("%d\n%d",&b,&c);
      l=largest(largest(a,b),c);
-	 printf("%d is the largest number",l);
-	 if(perfect(a))
-printf("%d is the perfect no");
+	 printf("\n%d is the largest number",l);
+
+	 //for perfect number
+	 int x;
+	 printf("\nenter x for check perfect  number or not..");
+	 scanf("%d",&x);
+	 if(perfect(x))
+printf("\n%d is the perfect no\n",x);
 else
-printf("%d is not perfect no");
+printf("\n%d is not perfect no\n",x);
 
  
 
