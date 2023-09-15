@@ -20,6 +20,15 @@
  	return(1);
  }
  
+ //print prime number
+ void printprime(int a,int b){
+	int i;
+	printf("\nthe prime are");
+	for(i=a;i<=b;i++){
+		if(isprime(i))
+		printf(" %d ",i);
+	}
+ }
    //for armstrongs number
  int isamongs(int a){
  	int n=a,sum=0,deno;
@@ -35,6 +44,16 @@
 	 return (0);
  }
 
+//print armstrong number
+void printarms(int a,int b){
+	int i;
+	printf("the armstrongs number");
+	for(i=a;i<=b;i++){
+		if(isamongs(i))
+		printf(" %d ",i);
+
+	}
+}
  //for largest of three number
  int largest(int x,int y)
  {
@@ -58,25 +77,43 @@
 	return(1);
 	else
 	return(0);
+ }
+	//print perfect number
+	void printperfect(int a,int b){
+		int j;
+		printf("\nthe perfect number:");
+		for(j=a;j<=b;j++){
+			if(perfect(j))
+			printf("%d",j);
+		}
+	}
 
-	
-}
- 
+ //for print factor of a number
+ void factor(int a)
+ {
+	int i;
+	printf("\nthe factors are:");
+	for(i=1;i<=a;i++){
+		if(a%i==0){
+			printf(" %d ",i);
+		}
+	}
+ }
  int main(){
  	int  a,f,l;
  	printf("enter a to find factorial....");
  	scanf("%d",&a);
  	f=factorial( a);
- 	printf("\n%d is the factorial of %d\n",f,a);
+ 	printf("%d is the factorial of %d\n\n",f,a);
 
 	//for prime number
 	int p;
 	printf("enter p for check it prime or not...");
 	scanf("%d",&p);
  	if (isprime(p)) {
-        printf("\n%d is a prime number.\n", p);
+        printf("%d is a prime number.\n\n", p);
     } else {
-        printf("\n%d is not a prime number.\n", p);
+        printf("%d is not a prime number.\n\n", p);
     }
 	
 	//for armstrongs number
@@ -84,9 +121,9 @@
 	printf("enter m for check armstrong or not..");
 	scanf("%d",&m);
  	if(isamongs(m)){
- 	 printf("\n%d is an Armstrong number.\n", m);
+ 	 printf("%d is an Armstrong number.\n\n", m);
     } else {
-        printf("\n%d is not an Armstrong number.\n", m);
+        printf("%d is not an Armstrong number.\n\n", m);
     }
 
 	//for largest of three number	
@@ -94,16 +131,44 @@
 	printf("enter two  number");
 	scanf("%d\n%d",&b,&c);
      l=largest(largest(a,b),c);
-	 printf("\n%d is the largest number",l);
+	 printf("%d is the largest number of %d,%dand%d\n\n",l,a,b,c);
 
 	 //for perfect number
 	 int x;
-	 printf("\nenter x for check perfect  number or not..");
+	 printf("enter x for check perfect  number or not=");
 	 scanf("%d",&x);
 	 if(perfect(x))
-      printf("\n%d is the perfect no\n",x);
+      printf("%d is the perfect no\n",x);
      else
-     printf("\n%d is not perfect no\n",x);
+     printf("%d is not perfect no\n\n",x);
 	 
-	
+	 //print prime number
+	 int start , end;
+	 printf("enter the first number for print prime number");
+	 scanf("%d",&start);
+	 printf("enter the last number for print prime number");
+	 scanf("%d",&end);
+	 printprime(start,end);
+	 
+	 //print factor a prime number
+	 int num;
+	 printf("\n\nenter a  number for find factor...");
+	 scanf("%d",&num);
+	 factor(num);
+
+	 //print armstong
+	int from,to;
+	printf("\n\narmstrong number from=");
+	scanf("%d",&from);
+	printf("to=");
+	scanf("%d",&to);
+     printarms(from,to);
+
+	 //print perfect number
+	 int first,last;
+	 printf("\n\nfirst no for print perfect number=");
+	 scanf("%d",&first);
+	 printf("last no for print perfect number=");
+	 scanf("%d",&last);
+	 printperfect(first,last);
  }
