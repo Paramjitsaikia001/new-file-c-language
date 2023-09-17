@@ -17,11 +17,14 @@ int revrse(int a){
 	}
 	return sum;
 }
-void swap(int *a,int *b){
-	int t;
-	*a=*a ^ *b;
-    *b=*a^*b;
-	*a=*a^*b;
+//array
+void even(int a[],int n){
+	int i;
+	for(i=0;i<n;i++){
+		if(a[i]%2==0){
+			printf("%d",a[i]);
+		}
+	}
 }
 	int main()
 	{
@@ -45,13 +48,20 @@ scanf("%d",&z);
 
 printf("\n%dis the reverse of %d\n ",revrse(z),z);
 return 0;
+	//print odd number of a array
+	int m;
+	printf("enter the size of the array");
+	scanf("%d",&m);
+	int arr[0];
+	int i;
+	for(i=0;i<m;i++){
+		printf("the valuwe of array when size is %d=",i);
+		scanf(" %d  ",&arr[i]);
+	}
+	even(arr,m);
+	
 
-// swap two number
-	int a,b;
-	printf("enter two number");
-	scanf("%d\n%d",&a,&b);
-	swap(&a,&b);
-	printf("a=%d b=%d",a,b);
+
 	}
 
 	

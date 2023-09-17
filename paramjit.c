@@ -153,6 +153,53 @@ int fibonacci(int n) {
         return fibonacci(n - 1) + fibonacci(n - 2);
 }
 }
+
+//print even number of a array
+void even(int a[],int n){
+	int i;
+	printf("\neven number of a array are");
+	for(i=0;i<n;i++){
+		if(a[i]%2==0){
+			printf(" %d ",a[i]);
+		}
+	}
+}
+
+//print odd number of a array
+void odd(int a[],int n){
+	int i;
+	printf("\nodd number of a array are");
+	for(i=0;i<n;i++){
+		if(a[i]%2!=0){
+			printf(" %d ",a[i]);
+		}
+	}
+}
+
+
+void sumproduct(int *a,int *b)
+{
+	int sum=0;
+	sum=*a + *b;
+	printf("\nthe sum is =%d ",sum);
+	int multi=0;
+	multi=*a * (*b);
+	printf("\nthe product is=%d \n",multi);	
+}
+
+//print the smallest and largest number of an array
+ void smalllargest(int a[],int n){
+	int i,min,max;
+	for(min=max=a[0],i=1;i<n;i++){
+		if(min>a[i])
+		min=a[i];
+		if(max<a[i])
+		max=a[i];
+	}
+	printf("min=%d\nmax=%d",min,max);
+	return;
+}
+
  int main(){
 	
  	int  i,a,f,l;
@@ -166,7 +213,10 @@ int fibonacci(int n) {
 	printf("      enter i=8 for print armstrong number\n");
 	printf("      enter i=9 for print perfect number\n");
 	printf("      enter i=10 for swap two number\n");
-	printf("      enter i=11 for check amicable  number or not\n\n\n");
+	printf("      enter i=11 for check amicable  number or not\n");
+	printf("      enter i=12 for print fibonacci series by recursive in a given range\n");
+	printf("      enter i=13 for print even numner of array[]={1,2,3,4,5,6,7,8,9 }\n");
+	printf("      enter i=14 for print odd numner of array[]={1,2,3,4,5,6,7,8,9 }\n\n\n");
 	printf("enter the value of i=");
 	scanf("%d",&i);
 	switch (i){
@@ -202,9 +252,14 @@ int fibonacci(int n) {
 	 case 4:
 	//for largest of three number	
 	int b,c,d;
-	printf("enter three  number");
-	scanf("%d\n%d\n%d",&b,&c,&d);
-     l=largest(largest(a,b),c);
+	printf("enter three  number for find the largest:");
+	printf("\nfirst number=");
+	scanf("%d",&b);
+	printf("\nsecond number=");
+	scanf("%d",&c);
+	printf("\nthird number=");
+	scanf("%d",&d);
+     int l=largest(largest(b,c),d);
 	 printf("%d is the largest number of %d,%dand%d\n\n",l,b,c,d);
  break;
  case 5:
@@ -286,8 +341,59 @@ case 9:
 	for(int i=0;i<=n;i++)
 	printf(" %d ", fibonacci(i) );
 	break;
+
+//print even number of a array
+	case 13:
+
+		int ar[]={1,2,3,4,5,6,7,8,9};
+	int s=9;
+	even(ar,s);
+	break;
+
+
+//print odd number of a array
+	case 14:
+
+		int arr[]={1,2,3,4,5,6,7,8,9};
+	int si=9;
+	odd(arr,si);
+	break;
+	case 15:
+	int A,B;
+	printf("enter first number=");
+	scanf("%d",&A);
+	printf("enter second number=");
+	scanf("%d",&B);
+	sumproduct(&A,&B);
+	break;
+
+case 16:
+	//print gcd of two number
+		int e,f,k;
+	printf("enter two number");
+	scanf("%d\n%d",&e,&f);
+	if(e>f){
+		int t=e;
+		e=f;
+		f=t;
+	}
+	for(k=f;k>=1;k--){
+		if(e%k==0 && f%k==0){
+			printf("gcd = %d",k);
+			break;
+		}
+	}
+	break;
+
+	//print smallest and largest number of an array
+	case 17:
+		int sl[]={4,5,7,1,2,9,0};
+	int N=7;
+	smalllargest(sl,N);
+	break;
+}
 }
 
- }
+ 
 
  
