@@ -216,18 +216,21 @@ void sumproduct(int *a,int *b)
 	printf("      enter i=11 for check amicable  number or not\n");
 	printf("      enter i=12 for print fibonacci series by recursive in a given range\n");
 	printf("      enter i=13 for print even numner of array[]={1,2,3,4,5,6,7,8,9 }\n");
-	printf("      enter i=14 for print odd numner of array[]={1,2,3,4,5,6,7,8,9 }\n\n\n");
+	printf("      enter i=14 for print odd numner of array[]={1,2,3,4,5,6,7,8,9 }\n");
+	printf("      enter i=15 for print sum and product of two number\n");
+	printf("      enter i=16 for find gcd of two number\n");
+	printf("      enter i=17 for print smallest and largest number of an array[]={4,5,7,1,2,9,0}\n\n\n");
 	printf("enter the value of i=");
 	scanf("%d",&i);
 	switch (i){
 
-	case 1:
+case 1:
  	printf("enter a to find factorial....");
  	scanf("%d",&a);
  	f=factorial( a);
  	printf("%d is the factorial of %d\n\n",f,a);
     break;
-	case 2:
+case 2:
 	//for prime number
 	int p;
 	printf("enter p for check it prime or not...");
@@ -238,7 +241,7 @@ void sumproduct(int *a,int *b)
         printf("%d is not a prime number.\n\n", p);
     }
 	break;
-	case 3:
+case 3:
 	//for armstrongs number
 	int m;
 	printf("enter m for check armstrong or not..");
@@ -249,7 +252,7 @@ void sumproduct(int *a,int *b)
         printf("%d is not an Armstrong number.\n\n", m);
     }
      break;
-	 case 4:
+case 4:
 	//for largest of three number	
 	int b,c,d;
 	printf("enter three  number for find the largest:");
@@ -272,7 +275,7 @@ void sumproduct(int *a,int *b)
      else
      printf("%d is not perfect no\n\n",x);
 	 break;
-	 case 6:
+case 6:
 	 //print prime number
 	 int start , end;
 	 printf("enter the first number for print prime number");
@@ -281,7 +284,7 @@ void sumproduct(int *a,int *b)
 	 scanf("%d",&end);
 	 printprime(start,end);
 	 break;
-	 case 7:
+case 7:
 	 //print factor a  number
 	 int num;
 	 printf("\n\nenter a  number for find factor...");
@@ -308,7 +311,7 @@ case 9:
 	  break;
 
 	  //swap two number
-	  case 10:
+ case 10:
 	  int num1,num2;
 	printf("first number=");
 	scanf("%d",&num1);
@@ -319,7 +322,7 @@ case 9:
 	break;
 
 	//check amicable or not
-	case 11:
+case 11:
 	int NUM1,NUM2;
 	printf("NUM1=");
 	scanf("%d",&NUM1);
@@ -331,7 +334,7 @@ case 9:
 	printf("%d and %d are  not amicable number\n",NUM1,NUM2);
 	break;
 
-	case 12:
+case 12:
 
 	//print fibonacci series
 	int n;
@@ -343,7 +346,7 @@ case 9:
 	break;
 
 //print even number of a array
-	case 13:
+case 13:
 
 		int ar[]={1,2,3,4,5,6,7,8,9};
 	int s=9;
@@ -352,13 +355,15 @@ case 9:
 
 
 //print odd number of a array
-	case 14:
+case 14:
 
 		int arr[]={1,2,3,4,5,6,7,8,9};
 	int si=9;
 	odd(arr,si);
 	break;
-	case 15:
+
+	//print sum and product of two  number
+case 15:
 	int A,B;
 	printf("enter first number=");
 	scanf("%d",&A);
@@ -386,7 +391,7 @@ case 16:
 	break;
 
 	//print smallest and largest number of an array
-	case 17:
+case 17:
 		int sl[]={4,5,7,1,2,9,0};
 	int N=7;
 	smalllargest(sl,N);
