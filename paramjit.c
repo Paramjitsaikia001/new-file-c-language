@@ -124,20 +124,49 @@ void printarms(int a,int b){
 	*a=*a^*b;
 }
 
+//check amicable or not
+ int amicable(int a, int b){
+	int i,j,sum1=0,sum2=0;
+	for(i=1;i<=a/2;i++){
+		if(a%i==0)
+		
+			sum1+=i;
+		}
+		for(j=1;j<=b/2;j++){
+		
+		if(b%j==0){
+			 sum2=sum2+j;
+		}
+}
+	if(sum1==b && sum2==a)
+	return 1;
+	else 
+	return 0;
+}
 
+//print fibonacci series
+int fibonacci(int n) {
+    if (n <= 1) {
+        return n;
+    } else {
+    
+        return fibonacci(n - 1) + fibonacci(n - 2);
+}
+}
  int main(){
 	
  	int  i,a,f,l;
-	printf("NOTE: enter 1 for find factorial of a number\n");
-	printf("      enter 2 for check prime number or not\n");
-	printf("      enter 3 for check armstrong number or not\n");
-	printf("      enter 4 for find largest of three number\n");
-	printf("      enter 5 for check perfect nummber or not\n");
-	printf("      enter 6 for print prime number\n");
-	printf("      enter 7 for print factor of a number\n");
-	printf("      enter 8 for print armstrong number\n");
-	printf("      enter 9 for print perfect number\n");
-	printf("      enter 10 for swap two number\n\n\n");
+	printf("NOTE: enter i=1 for find factorial of a number\n");
+	printf("      enter i=2 for check prime number or not\n");
+	printf("      enter i=3 for check armstrong number or not\n");
+	printf("      enter i=4 for find largest of three number\n");
+	printf("      enter i=5 for check perfect nummber or not\n");
+	printf("      enter i=6 for print prime number\n");
+	printf("      enter i=7 for print factor of a number\n");
+	printf("      enter i=8 for print armstrong number\n");
+	printf("      enter i=9 for print perfect number\n");
+	printf("      enter i=10 for swap two number\n");
+	printf("      enter i=11 for check amicable  number or not\n\n\n");
 	printf("enter the value of i=");
 	scanf("%d",&i);
 	switch (i){
@@ -233,7 +262,32 @@ case 9:
 	swap(&num1,&num2);
 	printf("after swap : first number=%d second number=%d",num1,num2);
 	break;
+
+	//check amicable or not
+	case 11:
+	int NUM1,NUM2;
+	printf("NUM1=");
+	scanf("%d",&NUM1);
+	printf("NUM2=");
+	scanf("%d",&NUM2);
+	if(amicable(NUM1,NUM2))
+	printf("%d and %d are amicable number\n",NUM1,NUM2);
+	else
+	printf("%d and %d are  not amicable number\n",NUM1,NUM2);
+	break;
+
+	case 12:
+
+	//print fibonacci series
+	int n;
+	printf("enter number of terms");
+	scanf("%d",&n);
+	printf("the fibonacci series is :");
+	for(int i=0;i<=n;i++)
+	printf(" %d ", fibonacci(i) );
+	break;
 }
+
  }
 
  
