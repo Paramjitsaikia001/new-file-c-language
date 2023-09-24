@@ -1,2 +1,5 @@
 # new-file-c-language
-this is my new file in github
+hello ! 
+My name is Paramjit Saikia.
+Currently , I live in Guwhati for study .
+I got my admission in B.Sc(hons) computer science.
