@@ -24,10 +24,31 @@ void primefactor(int a){
 	
 	}
 
+	//by recursive
+	void primefactors(int n,int i){
+	if(i==2 && i%2==0)
+	printf("2");
+	 if(n%i==0){
+	 if(prime(i))		
+    printf(" %d ",i);
+}
+	primefactors(n,1+i);
+
+}
+
 int main(){
 	int a;
 	printf("enter a number");
 	scanf("%d",&a);
 	primefactor(a);
-	
+
+
+//by recursive
+int n;
+	printf("enter a number");
+	scanf("%d",&n);
+	primefactors(n,2);
 }
+
+
+
