@@ -10,7 +10,7 @@ void power(int x,int y)
      {
        pow=x*pow;
      }
-   printf(" %d to the power %d is : %d\n",x,y,pow);
+   printf(" %d to the power %d is : %d\n\n\n",x,y,pow);
 }
 
 //recursive

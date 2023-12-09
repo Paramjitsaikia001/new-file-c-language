@@ -1,3 +1,6 @@
+//. Display all prime factors of à givan number. 
+
+
 #include<stdio.h>
 int main()
 {

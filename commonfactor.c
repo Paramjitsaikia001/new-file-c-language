@@ -1,3 +1,7 @@
+//Display all common facIors of two numbers
+
+
+
 #include<stdio.h>
 int main()
 {

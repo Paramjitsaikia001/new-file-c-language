@@ -1,4 +1,4 @@
-45.	//Enter a number and check whethe! it is fihonacci number or not.
+	//Enter a number and check whethe! it is fihonacci number or not.
 #include<stdio.h>
 int main()
 {
