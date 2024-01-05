@@ -32,9 +32,7 @@ int main()
         a=b;
         b=t;
        }
-       int m=1;
-       int g;
-        while (b != 0) {
+       while (b != 0) {
                 int temp = b;
                 b = a % b;
                 a = temp;

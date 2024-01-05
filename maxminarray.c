@@ -26,5 +26,5 @@ int main()
         
     }
     printf("max:%d\n",arr[0]);
-    printf("min:%d",arr[j]);
+    printf("min:%d",arr[n-1]);
 }
