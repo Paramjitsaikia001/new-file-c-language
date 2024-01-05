@@ -5,7 +5,7 @@ int main()
     int n;
     printf("enter the max power");
     scanf("%d",&n);
-      printf("the coefficient from left to right:")
+      printf("the coefficient from left to right:");
     for(int i=n;i>0;i++)
     {
       
