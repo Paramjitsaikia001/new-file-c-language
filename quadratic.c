@@ -2,15 +2,26 @@
 #include<math.h>
 int main()
 {
-    int n;
-    printf("enter the max power");
-    scanf("%d",&n);
-      printf("the coefficient from left to right:");
-    for(int i=n;i>0;i++)
+    double a,b,c;
+    double discriminant,root1,root2;
+    printf("enter the coefficint (a,b,c) of the quadratic equation :");
+    scanf("%lf%lf%lf",&a,&b,&c);
+    discriminant=b*b-4*a*c;
+    if(discriminant>0)//roots are real and different
     {
-      
+      root1=(-b+sqrt(discriminant))/(2*a);
+      root2=(-b-sqrt(discriminant))/(2*a);
+      printf("the roots are : %.2lf and %.2lf",root1,root2);
     }
-    return 1;
-    
-    return 1;
+    else if(discriminant==0)//roots are real and identical
+    {
+      root1=root2=-b/(2*a);
+      printf("the roots are : %.2lf",root1);
+    }
+    else{//roots are complex and conjugate
+       double realpart=-b/(2*a);
+       double imgpart=sqrt(-discriminant)/(2*a);
+       printf("the roots are : %.2lf +%.2lfi and %.2lf-%.2lfi ",realpart,imgpart,realpart,imgpart);
+    }
+  return 1;
 }
