@@ -1,3 +1,5 @@
+/*Compare two strings without using strcmp() 
+*/
 #include<stdio.h>
 #include<stdio.h>
 int main()
