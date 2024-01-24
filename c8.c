@@ -1,4 +1,5 @@
-/* Counting Characters and Lines in a File*/
+/* Write a C program that opens a file in append mode and allows the user to add text to 
+the end of the file.*/
 #include <stdio.h>
 
 int main() {
