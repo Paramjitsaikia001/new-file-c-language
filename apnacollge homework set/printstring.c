@@ -19,10 +19,6 @@ void print_string(char string[]){
     for(int i=0;string[i]!='\0';i++){
 printf("%c",string[i]);
     }
-//     printf("\n");
-//     for(int i=0;lastName[i]!='\0';i++){
-// printf("%c",lastName[i]);
-//     }
 }
 int main(){
     char firstname[]="Paramjit";
